@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<source src="dom.js" type="">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<!-- Create id for get element -->
+<h1 id="learning">I'm learning JavaScript</h1>
+ <h2>With the help youtube</h2><br>
+  <p id="name">My name is Hamid Ali</p>
+  <p id="p1">Web Development</p>
+    <p id="work"> My name is Hamid Ali
+     <span>I am Present Working Web developement</span>
+      <span>I hava a dream to achive software engenring degree</span>
+       <i> I am Backend Developer </i></p>
+        <b>Hamid Ali Jutt</b> <br>
+         <!-- Create class for get element -->
+            <p class="myClass"><span>A quick brown fox jumps over the lazy dog.</span> <br>  <em> A quick brown fox jumps over the lazy dog.</em> A quick brown fox <br>  jumps over the lazy dog.</p>
+       <h3 class="heading">This is text for use learn fast speed test</h3>
+       <p class="intro">This is text for use learn fast speed test</p>
+
+<script type="text/javascript">
+// getElementByID()
+document.write("Name id <br>");
+var result = document.getElementById("name");
+document.write("learning id <br>");
+var learn = document.getElementById("learning");
+
+// get tag with use id more specific
+var getSpan = document.getElementById("work") . getElementsByTagName("span");
+var getAll = document.getElementById("work") . getElementsByTagName("*");
+document.write(result + "<br>"); 
+document.write(learn + "<br>");
+document.write(getSpan + "<br>");
+document.write(getAll + "<br>");
+console.log(result);
+console.log(learn);
+console.log(getSpan);
+console.log(getAll);
+
+// getElementsByTagName("Tag_Name")
+var tag = document.getElementsByTagName("p");
+// get all tags elements in page
+var tagall = document.getElementsByTagName("*");
+// Get elements only show body
+var tagbody = document.body.getElementsByTagName("*");
+document.write(tag + "<br>");
+document.write(tagall + "<br>");
+document.write(tagbody + "<br>");
+console.log(tag);
+console.log(tagall);
+console.log(tagbody);
+
+// length property
+var data = document.getElementsByTagName("span");
+var len = data.length;
+document.write(len + "<br>");
+document.write(data + "<br>");
+console.log(len);
+console.log(data);
+
+// Get element by class name
+var cls = document.getElementsByClassName("myClass")[0];
+document.write(cls + "<br>");
+console.log(cls);
+
+document.write("<h3> CSS File in Html </h3>");
+var x = document.querySelectorAll("p.intro");
+document.getElementById("name").innerHTML ='The first Paragraph(Index 0) with class="intro":' + 
+x[0].innerHTML;
+
+document.write("<h2>Changing Html Content </h2>");
+document.getElementById("p1").innerHTML = "Well and Good";
+document.write("<h2>Run Script Successfully</h2>");
+
+document.write("<h1> Changing Html Style </h1> <br>");
+document.getElementById("learning").style.color = "blue";
+document.getElementById("learning").style.fontFamily = "Arial";
+document.getElementById("learning").style.Size = "larger";
+
+document.write("<h1>JavaScript Animation</h1><br>");
+
+var id = setInterval(frame, 5);
+
+// function frame() {
+//   if (/* test for finished */) {
+//     clearInterval(id);
+//   } else {
+//     /* code to change the element style */ 
+//   }
+// }
+
+function myMove() {
+  var elem = document.getElementById("animate");   
+  var pos = 0;
+  var id = setInterval(frame, 5);
+  function frame() {
+    if (pos == 350) {
+      clearInterval(id);
+    } else {
+      pos++; 
+      elem.style.top = pos + "px"; 
+      elem.style.left = pos + "px"; 
+    }
+  }
+}
+
+</script>   
+
+<h1>My First JavaScript Animation</h1>
+<p>
+  <button onclick="myMove()">Click Me</button>
+</p>
+ <div id="container">
+   <div id="animate"></div>
+ </div>
+</body>
+</html>

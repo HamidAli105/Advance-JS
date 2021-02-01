@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Query Selector</title>
+</head>
+<body>
+	<h1> We are learning JS</h1>
+	<h1 class="geek myclass"> Subscribe Hawebtips</h1>
+	<h1> Now</h1>
+	<p class="geek">Hello <span>Hawebtips</span> <b>World</b><span> Youtube</span></p>
+	<p class="myclass"><span>bye</span>Hawebtips</p>
+	<div id="show">
+		<p>1st p inside div </p>
+
+		<p class="geek">2nd p <span class="myspan"> inside <b> div</b> </span>  </p>
+		<span class="myspan">Hello Span</span>
+	</div>
+ <p id="show1">I am Paragraph</p>
+ <p id="show2">I have something </p>
+ <div>My name is Div</div>
+<script type="">
+
+// Element Selector
+var result = document.querySelector("p");	
+document.write(result);
+console.log(result);
+
+// ID Selector
+var idselector = document.querySelector("#show, #show1");	
+document.write(idselector);
+console.log(idselector);
+document.write("<br>");  
+
+// Class Selector
+var clsselector = document.querySelector(".geek");	
+document.write(clsselector);
+console.log(clsselector);
+document.write("<br>");  
+
+// Query Selector All Method
+// Element Selector
+var allelector = document.querySelectorAll("p, h1");	
+document.write(allelector);
+console.log(allelector);
+
+// ID Selector
+var idselector = document.querySelectorAll("#show2");	
+document.write(idselector);
+console.log(idselector);
+document.write("<br>");  
+
+// Class Selector
+var clsselector = document.querySelectorAll(".geek, .myclass");	
+document.write(clsselector);
+console.log(clsselector);
+document.write("<br>");
+
+// Attribute Selector
+var attselector = document.querySelectorAll("div[id='show']");	
+document.write(attselector);
+console.log(attselector);
+document.write("<br>");
+document.write("<br>");
+// More Specific
+// var data = document.getElementById("show");
+// var morspeci = data.querySelectorAll("span.myspan");
+
+// var morspeci = document.getElementById("show").querySelectorAll("span.myspan");
+
+var morspeci = document.querySelectorAll("#show > .geek > span.myspan");
+document.write(morspeci);
+console.log(morspeci);
+document.write("<br>");
+document.write("<br>");
+// Length and Loop Property
+var lendata = document.querySelectorAll(".geek");
+var lenproperty = lendata.length;
+document.write(lenproperty + "<br>");
+for(let i=0; i<lenproperty; i++)
+{
+	var loopdata = lendata[i];
+	document.write(loopdata);
+	console.log(loopdata);
+}
+
+// document.write(lendata);
+// console.log(lendata);
+document.write("<br>");
+
+
+
+</script>
+</body>
+</html>

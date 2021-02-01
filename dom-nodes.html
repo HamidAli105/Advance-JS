@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DOM</title>
+<source src="dom.js" type="">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="div1">
+<p id="p1">This is a paragraph.</p>
+<p id="p2">This is another paragraph.</p>
+<p id="p3">This is third paragraph.</p>
+</div>
+
+<script>
+  // <!-- Creating new html node -->
+// document.write("<h2>Creating new html element Nodes</h2> <br>");
+// var para = document.createElement("p");
+// var node = document.createTextNode("This is new paragraph.");
+// para.appendChild(node);
+// var element = document.getElementById("div1");
+// element.appendChild(para);
+
+document.write("<h2>Creating new html element insertBefor</h2> <br>");
+var para = document.createElement("p");
+var node = document.createTextNode("This is new paragraph.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+var child = document.getElementById("p1");
+element.insertBefore(para, child);
+
+// Removing Existing Html Elements
+document.write("<h2>Removing Existing Html Elements</h2>")
+var elmnt = document.getElementById("p1");
+elmnt.remove();
+
+//Removing a Child Node
+document.write("<h2>Removing a child node</h2><br>");
+
+var parent = document.getElementById("div1");
+var child = document.getElementById("p2");
+parent.removeChild(child);
+
+// Replacing Html Elements
+document.write("<h2>Replacing Html Elements</h2> <br>");
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var parent = document.getElementById("div1");
+var child = document.getElementById("p3");
+parent.replaceChild(para, child);
+
+</script>
+
+</body>
+</html>

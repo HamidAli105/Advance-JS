@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Child Nodes</title>
+</head>
+<body id="myid">
+    
+    <h1 id="myid0"> <span>We are learning JS</span>  <!--This is a comment--> </h1>
+    <p id="myid1">I am Paragraph</p>
+    <p id="myid2">
+        <span>I am span</span> am Paragraph</p>
+
+    <script>
+
+        // childNodes
+
+       document.write("Child Node <br>");
+       var result = document.getElementById("myid");
+       document.write(result.childNodes + "<br>");
+       console.log(result.childNodes);
+        
+       document.write("<br>"); 
+
+         // childNodes Vs children: if use white space and enter key use for childNodes 
+        //  and use only element then use children
+        document.write("childNodes vs children <br>");
+        var result = document.getElementById("myid0");
+        var res = document.getElementById("myid2");
+
+        // Child
+        document.write(result.childNodes + "<br>");
+        console.log(result.childNodes);
+
+        // children
+        document.write(res.children + "<br>");
+        console.log(res.children);
+
+        // length property
+        document.write("child Node Length Property <br>");
+        var resul = document.getElementById("myid");
+        var len = resul.children.length;
+        document.write(len + "<br>");
+        console.log(len);
+        console.log(resul.children);
+
+        // For loop
+        document.write("For Loop <br>")
+        var resultloop = document.getElementById("myid");
+        var leng =  resultloop.children.length;
+        for(let i=0; i<leng; i++)
+        {
+            console.log(resultloop.childNodes[i]);
+        }
+        console.log(resultloop.childNodes[1]);
+        console.log(resultloop.children [2]);
+        document.write(resultloop + "<br>");
+
+         // Find and Replace loop text
+         var results = document.getElementById("myid0");
+        results.children[0].textContent = "I am learning DOM";
+        
+
+
+    </script>
+
+</body>
+</html>

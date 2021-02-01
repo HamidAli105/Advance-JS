@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Before</title>
+</head>
+
+<body>
+    <div>
+        <h3>JS Framworks</h3>
+        <ul id="myul">
+            <li>Jquery</li>
+            <li id="myang">Angular JS</li>
+            <li>React JS</li>
+            <li id="myd3">D3 JS</li>
+        </ul>
+        <ul>
+            <li>Java Programming</li>
+            <li id="myc">C++ Programming</li>
+        </ul>
+    </div>
+
+    <script>
+        // parentnode.insertbefore(newNode, referenceNode)
+        // When insert new Element and Accessing Parent Node
+        var parentNode = document.getElementById("myul");
+        // Creating new li Element
+        var newNode = document.createElement("li");
+
+        // Adding text using textContent
+
+        newNode.textContent = "Backbone JS";
+        // Accessing Reference Node
+        var refNode = document.getElementById("myang");
+
+        // Insert New Element
+        // if not use refNode then new element add end of the element
+        parentNode.insertBefore(newNode, refNode);
+
+        console.log(parentNode);
+
+        //  parentnode.insertbefore(newNode, referenceNode)
+        // when insert existing node
+
+        var parentNode = document.getElementById("myul");
+        var moveNode = document.getElementById("myd3");
+        var refNode = document.getElementById("myang");
+        parentNode.insertBefore(moveNode, refNode);
+        console.log(parentNode);
+
+        //  parentnode.insertbefore(newNode, referenceNode)
+        // when insert Text Node
+
+        var parentNode = document.getElementById("myul");
+        var txtNode = document.createTextNode("Hello World");
+        var refNode = document.getElementById("myang");
+        parentNode.insertBefore(txtNode, refNode);
+        console.log(parentNode);
+
+        //  parentnode.insertbefore(newNode, referenceNode)
+        // when insert existing node
+
+        var parentNode = document.getElementById("myul");
+        var moveNode = document.getElementById("myc");
+        var refNode = document.getElementById("myang");
+        parentNode.insertBefore(moveNode, refNode);
+        console.log(parentNode);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

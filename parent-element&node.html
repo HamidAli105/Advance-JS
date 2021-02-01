@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Element&Node </title>
+</head>
+<body>
+    <h1  id="myid">We are learning JS <!--This is a comment--> </h1>
+    <p id="myid1">I am Paragraph</p>
+
+    <script>
+        // Parent Node
+        document.write("Parent Node <br>");
+        var result = document.getElementById("myid");
+       document.write(result.parentNode + "<br>");
+        console.log(result.parentNode);
+
+        // Parent Element
+        document.write("Parent Element <br>");
+        var result = document.getElementById("myid");
+       document.write(result.parentElement + "<br>");
+        console.log(result.parentElement);
+
+
+    </script>
+    
+</body>
+</html>

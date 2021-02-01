@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Nodes</title>
+</head>
+<body>
+    <h1 id="myid">We are Learning JS <!-- This is a Comment--></h1>
+    <p id="myid1">I am Paragraph</p>
+
+
+    <script>
+
+        // Document Node Name
+        document.write("--------- Document --------- <br>");
+        document.write(document.nodeName + "<br>");
+        console.log(document.nodeName);
+
+        // Document Node Value
+        document.write(document.nodeValue + "<br>");
+        console.log(document.nodeValue);
+
+        // Document Node Type
+        document.write(document.nodeType + "<br>");
+        console.log(document.nodeType);
+
+        //Element
+        document.write("<br>--------- Element --------- <br>");
+        var elm = document.getElementById("myid");
+        document.write(elm.nodeName + "<br>");
+        console.log(elm.nodeName);
+
+        // elm Node Value
+        document.write(elm.nodeValue + "<br>");
+        console.log(elm.nodeValue);
+
+        // elm Node Type
+        document.write(elm.nodeType + "<br>");
+        console.log(elm.nodeType);
+
+        //Text
+        document.write("<br>--------- Text --------- <br>");
+        var txt = document.getElementById("myid");
+        document.write(txt.firstChild.nodeName + "<br>");
+        console.log(txt.firstChild.nodeName);
+
+        // txt Node Value
+        document.write(txt.firstChild.nodeValue + "<br>");
+        console.log(txt.firstChild.nodeValue);
+
+        // txt Node Type
+        document.write(txt.firstChild.nodeType + "<br>");
+        console.log(txt.firstChild.nodeType);
+
+         //Comment
+         document.write("<br>--------- Comment --------- <br>");
+        var txt = document.getElementById("myid");
+        document.write(txt.firstChild.nextSibling.nodeName + "<br>");
+        console.log(txt.firstChild.nextSibling.nodeName);
+
+        // Comment Node Value
+        document.write(txt.firstChild.nextSibling.nodeValue + "<br>");
+        console.log(txt.firstChild.nextSibling.nodeValue);
+
+        // Comment Node Type
+        document.write(txt.firstChild.nextSibling.nodeType + "<br>");
+        console.log(txt.firstChild.nextSibling.nodeType);
+
+        // Called Text and Change
+        document.write("<br>--------- Called Text --------- <br>");
+        var txt = document.getElementById("myid1"). firstChild.nodeValue = 
+        "This is a new Value <br>";
+        document.write(txt);
+
+        // Attribute Properties Name 
+        var result = document.getElementById("myid");
+        var getAtrr =  result.attributes[0].nodeName;  
+        document.write(getAtrr + " = ");
+        console.log(getAtrr);
+
+        // Attribute Properties Value
+        var result = document.getElementById("myid");
+        var getAtrr =  result.attributes[0].nodeValue;  
+        document.write(getAtrr + "<br>");
+        console.log(getAtrr);
+
+        // Attribute length Property
+        var result = document.getElementById("myid");
+        document.write(result.attributes.length + "<br>");
+        for (let i =0; i < result.attributes.length; i++)
+            {
+                document.write(result.attributes[i].nodeName + " = ");
+                document.write(result.attributes[i].nodeValue + " <br>");
+            }
+
+            //old nodeName, nodeValue // deprecated
+            
+            // lates name and value
+        document.write("--------Latest node name and value-----------<br>");
+        var result = document.getElementById("myid");
+        document.write("For Loop get Properties <br>");
+        var len = result.attributes.length;
+        for(let i=0; i< len; i++)
+        {
+          document.write(result.attributes[i].name + " = ");
+          document.write(result.attributes[i].value + "<br><br>");
+
+        }
+
+        var getAtrrname =  result.attributes[0].name;  
+        var getAtrrvalue =  result.attributes[0].value;  
+
+        document.write(getAtrrname + " = ");
+        document.write(getAtrrvalue + "<br>");
+        console.log(getAtrr);
+
+    </script>
+</body>
+</html>

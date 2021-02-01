@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creating Node</title>
+</head>
+
+<body>
+    <div id="myid">
+        <h1 id="myh1">We are learning JavaScript</h1>
+
+        <h2 id="myh2">We are learning JavaScript</h2>
+        <h1>I am h1 </h1>
+
+    </div>
+
+    <section id="mysec">
+
+    </section>
+
+    <script>
+
+        // Creating a new h2 heading Element
+        document.write("Create Element + <br>");
+        var nNode = document.createElement("h2");
+        console.log(nNode);
+        document.write(nNode + "<br>");
+
+        // Appending New h2 to Div
+        var targetNode = document.getElementById("myid")
+        targetNode.appendChild(nNode);
+        console.log(targetNode);
+
+        // Small way Creating and Appending New h2 to div
+        targetNode.appendChild(document.createElement("h2"));
+        console.log(targetNode);
+
+        // Creating a new Text Node
+        document.write("Create Text Node + <br>");
+        var nTNode = document.createTextNode("Text Created by JavaScript");
+        console.log(nTNode);
+        document.write(nTNode + "<br>");
+
+        // Creating a new Comment Node
+        document.write("Create Comment Node + <br>");
+        var nCNode = document.createComment("I am new Comment");
+        console.log(nCNode);
+        document.write(nCNode + "<br>");
+
+        // Creating a empty Document Fragment
+        document.write("Create Document Fragment + <br>");
+        var df = document.createDocumentFragment();
+        console.log(df);
+        document.write(df + "<br>");
+
+        // Creating Append Existing Element
+        document.write("Append Child + <br>");
+        document.write("Create Append Existing Element+ <br>");
+        var myid = document.getElementById("myid");
+        // Parent 
+        var mysec = document.getElementById("mysec");
+        // Child
+        var myh1 = document.getElementById("myh1");
+        mysec.appendChild(myh1);
+
+        console.log(myid);
+        document.write(myid + "<br>");
+
+        console.log(mysec);
+        document.write(mysec + "<br>");
+
+        // Append data in Text Node
+        var h = document.getElementById("myh2");
+        h.firstChild.appendData(" In World");
+        console.log(h.childNodes);
+
+        // Appending New Comment Node to Div
+        document.write("Appending New Comment Node to Div + <br>");
+
+        var targetCNode = document.getElementById("myid");
+        // Creating New Comment Node
+        // Append New Comment Node to Div
+        targetCNode.appendChild(document.createComment("Comment From JS"));
+        console.log(targetCNode);
+        document.write(targetCNode + "<br>");
+
+
+    </script>
+
+
+</body>
+
+</html>

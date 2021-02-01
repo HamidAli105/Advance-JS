@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Element Node</title>
+</head>
+<body>
+    <div id="myid">
+        <h1>We are Learning JavaScript</h1>
+        <h1>I am  h1</h1>
+        
+    </div>
+    <script>
+        // Creating New Element h2
+        document.write("Creating New Element h2 <br>");
+        var nENode = document.createElement("h2");
+
+        // Creating Text Node
+        document.write("Creating Text Node <br>");
+        var nTNode = document.createTextNode("Text by JS");
+
+        // Creating Comment Node
+        document.write("Creating Comment Node <br>");
+        var nCNode = document.createComment("Comment by JS");
+
+        // Append New Text Node to New Element Node h2
+        document.write("Append New Text Node to New Element Node h2 <br>");
+        nENode.appendChild(nTNode);
+        console.log(nENode);
+
+        // Append Comment Node to New Element Node h2
+        document.write("Append Comment Node to New Element Node h2 <br>");
+        nENode.appendChild(nCNode);
+        console.log(nENode);
+
+        // Append New Element Node to Div
+        document.write("Append New Element Node to Div <br>");
+        var targetNode = document.getElementById("myid");
+        targetNode.appendChild(nENode);
+        console.log(targetNode);
+
+        // Appen Comment Node to Div
+ 
+        // document.write("Appen Comment Node to Div <br>");
+        // targetNode.appendChild(nCNode);
+        console.log(targetNode);
+
+    </script>
+</body>
+</html>

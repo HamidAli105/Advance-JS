@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Fragment</title>
+</head>
+
+<body>
+    <div id="myid">
+        <h1>We are learning JS</h1>
+        <h1>I am H1</h1>
+    </div>
+
+    <script>
+        // Create Empty Document Fragment
+        document.write("Create Empty Document Fragment <br>");
+        var df = document.createDocumentFragment();
+
+        // Creating new Element h3
+        var hNode = document.createElement("h3");
+
+        // Creating New Element P
+        var pNode = document.createElement("p");
+
+        // Text for New h3 and p Element
+        hNode.textContent = "H3 from JS";
+        pNode.textContent = "P from JS";
+      
+        // Appending Nodes to DF
+        df.appendChild(hNode);
+        df.appendChild(pNode)
+
+        // Appending DF to Div
+        var targetNode = document.getElementById("myid");
+        targetNode.appendChild(df);
+        console.log(targetNode);
+
+    </script>
+</body>
+
+</html>

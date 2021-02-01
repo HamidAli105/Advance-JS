@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<h3>The window.location object</h3>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+<!-- Cookie enabled -->
+<p id="demo8"></p>
+<!-- Broswer app name -->
+<p id="demo9"></p>
+<!-- Broswer code name -->
+<p id="demo10"></p>
+<!-- Browser Engine -->
+<p id="demo11"></p>
+<!-- Browser Platform -->
+<p id="demo12"></p>
+<!-- Browser Language -->
+<p id="demo13"></p>
+<!-- is browser online -->
+<p id="demo14"></p>
+
+<script>
+	// javascript window
+var w = window.innerWidth
+|| document.documentElement.clientWidth
+|| document.body.clientWidth;
+
+var h = window.innerHeight
+|| document.documentElement.clientHeight
+|| document.body.clientHeight;
+
+var x = document.getElementById("demo");
+x.innerHTML = "Browser inner window width: " + w + ", Browser inner height: " + h + ".";
+// JS Screen width
+document.getElementById("demo1").innerHTML = 
+"Screen width is: " + screen.width;
+// JS Screen Height
+document.getElementById("demo2").innerHTML = 
+"Screen Height is: " + screen.height;
+// Window location object
+ document.getElementById("demo3").innerHTML = 
+"The full URL of this page is:<br>" + window.location.href;
+// window location host
+document.getElementById("demo4").innerHTML = 
+"Page hostname is: " + window.location.hostname;
+// Display the path name of current page
+document.getElementById("demo5").innerHTML =
+"Page path is " + window.location.pathname;
+// Window location Protocol
+document.getElementById("demo6").innerHTML =
+"Page protocol is " + window.location.protocol;
+// Window location Port
+document.getElementById("demo7").innerHTML =
+"Port number is " + window.location.port; 
+// Window location Assign
+function newDoc() {
+  window.location.assign("https://www.firstmove.com.au")
+}
+
+// JS History Back
+function goBack() {
+  window.history.back()
+}
+
+// JS History Forward
+function goForward() {
+  window.history.forward()
+}
+
+// Browser Cookie enabled
+document.getElementById("demo8").innerHTML =
+"cookiesEnabled is " + navigator.cookieEnabled;
+
+// Browser app name
+document.getElementById("demo9").innerHTML =
+"navigator.appName is " + navigator.appName;
+
+// Broswer code name
+document.getElementById("demo10").innerHTML =
+"navigator.appCodeName is " + navigator.appCodeName;
+
+// Browser Engine
+document.getElementById("demo11").innerHTML =
+"navigator.product is " + navigator.product;
+
+// Browser platform
+document.getElementById("demo12").innerHTML = 
+"navigator.platform is " + navigator.platform;
+
+// Browser language
+document.getElementById("demo13").innerHTML =
+"navigator.language is " + navigator.language;
+
+//is browser online
+document.getElementById("demo14").innerHTML =
+"navigator.onLine is " + navigator.onLine; 
+
+
+
+</script>
+<input type="button" value="Load new document" onclick="newDoc()"><br><br>
+<input type="button" value="Back" onclick="goBack()"><br><br>
+<input type="button" value="Forward" onclick="goForward()">
+</body>
+</html>

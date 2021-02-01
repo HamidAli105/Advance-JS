@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Normalize</title>
+</head>
+<body>
+    <div id="myid">
+        <h1>We are learning  JavaScript</h1>
+        <h1>I amd H!</h1>
+    </div>
+
+    <script>
+        // Targetting Element where we will append New Nodes
+        var targetNode = document.getElementById("myid");
+
+        // Creating and append New Text
+        targetNode.appendChild(document.createTextNode("Hello"));
+
+        // Creating and append New Text
+        targetNode.appendChild(document.createTextNode(" My Name"));
+
+        // Creating and append New Text
+        targetNode.appendChild(document.createTextNode(" is Hamid Ali"));
+
+        targetNode.normalize();
+        console.log(targetNode.childNodes);
+
+
+    </script>
+</body>
+</html>
