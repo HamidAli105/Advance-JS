@@ -14,19 +14,48 @@
 
     <script>
 
+         document.write("Insert Adjacent Element Method <br>");
         // targetElement.insertAdjacentElement("Position", elment)
         // position : 'beforebegin' | 'afterbegin' | 'beforeend' | 'afterend'
         var parentNode = document.getElementById("mydiv");
         var h = document.getElementById("myh2");
         var newElement = document.createElement("span");
         newElement.textContent = "This is a Span";
-        // at a time one position use
+        // at a time one position use if use one and create two then remove one position 
         h.insertAdjacentElement('beforebegin', newElement);
         h.insertAdjacentElement('afterend', newElement);
         h.insertAdjacentElement('afterbegin', newElement);
         h.insertAdjacentElement('beforeend', newElement);
 
         console.log(parentNode);
+
+        document.write("Insert Adjacent Html Method <br>");
+        // targetElement.insertAdjacentHTML("Position", elment)
+        // position : 'beforebegin' | 'afterbegin' | 'beforeend' | 'afterend'
+        var parentDivNode = document.getElementById("mydiv");
+        var ha = document.getElementById("myh3");
+        var myhtml = "<span>Hello Geekyshows </span>";
+        // at a time both position use this elment use copy
+        ha.insertAdjacentHTML('beforebegin', myhtml);
+        ha.insertAdjacentHTML('afterend', myhtml);
+        ha.insertAdjacentHTML('afterbegin', myhtml);
+        ha.insertAdjacentHTML('beforeend', myhtml);
+
+         console.log(parentDivNode);
+
+         document.write("Insert Adjacent Text Method <br>");
+        // targetElement.insertAdjacentText("Position", elment)
+        // position : 'beforebegin' | 'afterbegin' | 'beforeend' | 'afterend'
+        var parentTxtNode = document.getElementById("mydiv");
+        var heding = document.getElementById("myh2");
+        var txt = "Hello Geekyshows World";
+        // at a time both position use this elment use copy
+        heding.insertAdjacentText('beforebegin', txt);
+        heding.insertAdjacentText('afterend', txt);
+        heding.insertAdjacentText('afterbegin', txt);
+        heding.insertAdjacentText('beforeend', txt);
+
+         console.log(parentDivNode);
 
     </script>
 </body>
