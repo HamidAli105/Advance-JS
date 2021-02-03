@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Html</title>
+</head>
+<body>
+    <div id="mydiv">
+    <ul id="myul">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+    </ul>
+</div>
+
+    <script>
+        document.write("Inner HTML <br>");
+        var u = document.getElementById("myul");
+       //Get Element  
+        console.log(u.innerHTML);
+      // Set Empty Element
+      u.innerHTML= "<li>JavaScript</li><br><li>PHP</li><br><li>HTML</li>";
+      console.log(u);
+
+      document.write("Outer HTML <br>");
+      var div = document.getElementById("mydiv");
+      var ul = document.getElementById("myul");
+    // when use outer html remove replace outer element
+      ul.outerHTML = "<p>A quick brown fox jumps over the lazy dog.</p>";
+      console.log(div);
+
+    </script>
+</body>
+</html>
