@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Html</title>
+</head>
+<body>
+    
+    <ul id="myul">
+        <li>Item 1</li>
+        <li id="item_2">Item 2</li>
+        <li id="item_3">Item 3</li>
+        <li>Item 4</li>
+    </ul>
+
+    <div id="mydiv">
+
+    </div>
+
+
+    <script>
+        document.write("Copy Node <br>");
+        // targetNode.cloneNode(deep) where deep = true | false
+        var u = document.getElementById("myul");
+        // if use false then copy only id and if use true then copy all id content
+        var duplicateNode = u.cloneNode(true);
+        console.log(duplicateNode);
+
+        var div = document.getElementById("mydiv");
+        div.appendChild(duplicateNode);
+        console.log(div);
+
+        document.write("Delete Node <br>");
+        console.log("Delete Node");
+        // parentNode.removeChild (target_node)
+        // parent node
+        var ul = document.getElementById("myul");
+        // target node
+        var i = document.getElementById("item_2");
+        // Remove element using id
+        var delNode = ul.removeChild(i);
+        console.log(delNode);
+        // Remove element using first child element
+        var delNode = ul.removeChild(ul.firstElementChild);
+         // Remove element using childNodes
+         var delNode = ul.removeChild(ul.childNodes[3]);
+         // Remove element without id
+         var it = document.getElementById("item_3");
+         var delNode = it.parentNode.removeChild(it);
+        console.log(delNode);
+
+
+    </script>
+</body>
+</html>

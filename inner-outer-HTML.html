@@ -6,30 +6,27 @@
     <title>Inner Html</title>
 </head>
 <body>
-    <div id="mydiv">
-    <ul id="myul">
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
-        <li>Item 4</li>
-    </ul>
-</div>
+    <!-- <div id="mydiv"> -->
+    <ul id="myul"><li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li></ul>
+<!-- </div> -->
 
     <script>
-        document.write("Inner HTML <br>");
+        document.write("Inner Text <br>");
         var u = document.getElementById("myul");
        //Get Element  
-        console.log(u.innerHTML);
-      // Set Empty Element
-      u.innerHTML= "<li>JavaScript</li><br><li>PHP</li><br><li>HTML</li>";
-      console.log(u);
+        console.log(u.innerText);
+        console.log(u.childNodes);
 
-      document.write("Outer HTML <br>");
-      var div = document.getElementById("mydiv");
-      var ul = document.getElementById("myul");
-    // when use outer html remove replace outer element
-      ul.outerHTML = "<p>A quick brown fox jumps over the lazy dog.</p>";
-      console.log(div);
+      // Set first  Empty after data Element
+      u.innerText= "This is Inner Text Element";
+      console.log(u.childNodes);
+
+    //   document.write("Outer HTML <br>");
+    //   var div = document.getElementById("mydiv");
+    //   var ul = document.getElementById("myul");
+    // // when use outer html remove replace outer element
+    //   ul.outerHTML = "<p>A quick brown fox jumps over the lazy dog.</p>";
+    //   console.log(div);
 
     </script>
 </body>
