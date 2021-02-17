@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modify Text Node</title>
+</head>
+<body>
+    <h2 id="myh2">Hello World</h2>
+    <script>
+        // textNode.length
+        var h = document.getElementById("myh2");
+        var result = h.firstChild.length;
+        console.log(result);
+        console.log(h.firstChild.length);
+
+        // Delete data in text node
+        var h2 = document.getElementById("myh2");
+        //  h2.firstChild.deleteData(0,7);
+        
+        //  Data Property
+        var hd = document.getElementById("myh2");
+        var getData = hd.firstChild.data;
+        console.log(getData);
+
+        //  Data Property and Data Set
+        var hd = document.getElementById("myh2");
+        //  hd.firstChild.data = "I am new Data";
+         console.log(hd.firstChild);
+        
+         // Insert data in Text Node
+        var hd = document.getElementById("myh2");
+         hd.firstChild.insertData(5, " Digital ");
+
+           // Replace data in Text Node
+        var hd = document.getElementById("myh2");
+         hd.firstChild.replaceData(5, 10, " Modern ");
+
+         // Split Text
+        var hd = document.getElementById("myh2");
+         hd.firstChild.splitText(2);
+         console.log(hd.firstChild);
+
+         // SubstringData
+        var hd = document.getElementById("myh2");
+         hd.firstChild.substringData(0, 3);
+         console.log(hd.firstChild);
+        
+        
+
+    </script>
+</body>
+</html>

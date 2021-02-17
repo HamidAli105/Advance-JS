@@ -18,7 +18,23 @@
     <script>
         // parentNode.replaceChild(newChild, oldChild)
         var u = document.getElementById("myul");
-        var i = document
+        var i = document.getElementById("item_2");
+        // replacing with new node
+        // creating a new elment
+        // var  newChild = document.createElement("li");
+        // newChild.textContent = "Item N";
+        // var replaceNode = u.replaceChild(newChild, i);
+        // console.log(u);
+        // console.log(replaceNode);
+        // replacing with existing node
+        var pan = document.getElementById("myspan");
+        u.replaceChild(pan, i);
+        console.log(u);
+
+
+
+
+
     </script>
 </body>
 </html>

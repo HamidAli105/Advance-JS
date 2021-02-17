@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dif Betwen HTML&DOM</title>
+</head>
+<body>
+ <h2 id="myh2">Hello Digital World</h2>
+ <p id="myp" title="para" class="myclass">Paragraph</p>
+
+ <script>
+     var p = document.getElementById("myp");
+    //  console.log(Object.prototype.toString.call(p));
+    // get class value
+    console.log(p.className);
+    // get and set p value
+    p.title ="mypara";
+    console.log(p);
+ </script>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Property</title>
+</head>
+<body>
+ <h2 id="myh2">Hello Digital World</h2>
+ <p id="myp" title="para" class="myclass" style="background-color: red; font-size:30px">Paragraph</p>
+
+ <script>
+     var p = document.getElementById("myp");
+    //  Simple attribute
+     console.log(p.attributes);
+     //  Specific attribute
+     console.log(p.attributes[1]);
+      // called key
+      console.log(p.attributes['class']);
+    // setAttribute method one
+    p.setAttribute('class', 'myclassdigitalworld');
+    console.log(p);
+    // method two
+    p.className = "myclasshawebtips";
+    console.log(p); 
+// setAttribute method three
+p.setAttribute('class', 'myclasspara');
+    console.log(p);
+    // setAttribute inline style method wrong method
+p.setAttribute('style', 'font-style: italic');
+    console.log(p);
+     // setAttribute inline style method correct method
+    p.style.fontStyle = "italic";
+    console.log(p);
+
+    
+    // get attribute method one
+    var getAt = p.getAttribute('id');
+    console.log(getAt);
+    // get attribute method two
+    console.log(p.id);
+ </script>
+
+
+</body>
+</html>
