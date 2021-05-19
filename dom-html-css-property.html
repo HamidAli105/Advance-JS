@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Html-Css Style</title>
+    <style>
+        .myclass1{
+            background-color: blue;
+            font-size: 50px;
+        }
+        .myclass2{
+            background-color: red;
+        }
+    </style>
+</head> 
+<body>
+    <p id="myp" class="myclass2" style="color: yellowgreen;">Paragraph</p>
+    <p id="mypa" class="myclass2 myclass1" style="color: yellowgreen;">Paragraph</p>
+    <p id="mypage" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
+    <p id="pg" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
+    <script>
+        // check value
+        var p = document.getElementById("myp");
+        var bg = p.style.backgroundColor;
+        document.write(bg);
+        console.log(bg);
+        // set value
+        var p = document.getElementById("myp");
+        p.style.backgroundColor = "red";
+        p.style.fontSize ="80px";
+        console.log(p);
+
+        // Dynamic Style Manipulation
+    //    var pa = document.getElementById("mypa")
+    //    pa.className = "myclass1";
+    //    ps.
+    //    console.log(pa);
+
+    //    Class List Property using dom token list
+    var pa = document.getElementById("mypa")
+       var elementClass = pa.classList;
+       document.write(elementClass);
+    //   Called specific class
+    //    console.log(elementClass[1]);
+    //   Length Property
+       console.log(elementClass.length);
+
+    //   Value Property
+        console.log(elementClass.value);
+
+    //   Called class using item
+    console.log(elementClass.item(0));
+
+    // add new one and multiple  classes
+    elementClass.add("myclass4", "myclass5", "myclass6");
+    console.log(pa);
+
+    // Remove one and multiple classes
+    elementClass.remove("myclass4", "myclass5");
+    console.log(pa);
+
+     // Replace  class
+     elementClass.replace("myclass2", "myclass1");
+    console.log(pa);
+     // contains is used exist or not exist classes
+    var c = elementClass.contains("myclass6");
+    console.log(c);
+
+    // toggle is used add remove classes
+    var c = elementClass.toggle("myclass1");
+    var c = elementClass.toggle("myclass1");
+    console.log(c);
+   
+    // CSS style declaration
+    document.write("<br>");
+    document.write("CSS Style Declartion");
+    // toggle is used add remove classes
+    var page = document.getElementById("mypage")
+    var cso = page.style;
+    // method one
+    cso.cssText = "font-size: 50px; color: blue;"
+    console.log(page);
+
+    // method two
+    console.log(cso.length);
+    console.log(cso);
+
+    // item method
+    var pg = document.getElementById("myp");
+    var cs = pg.style;
+    console.log(cs.item(1));
+
+     // Get Property Value
+     var pg = document.getElementById("pg");
+     var cp = pg.style;
+   var propvalue = cp.getPropertyValue('color');
+    console.log(propvalue);
+
+    // Remove Property Value
+    var pg = document.getElementById("pg");
+     var cp = pg.style;
+    cp.removeProperty('color');
+    console.log(pg);
+
+    // Set Property Value
+    var pg = document.getElementById("pg");
+     var cp = pg.style;
+    cp.setProperty('font-size', '90px', 'important');
+    console.log(pg);
+
+    // Check Property Prioty
+    var pg = document.getElementById("pg");
+     var cp = pg.style;
+    var proptyPriorty = cp.getPropertyPriority('color');
+    console.log(proptyPriorty);
+
+    </script>
+</body>
+</html>
