@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Element</title>
+</head>
+<body>
+    <table border="1" id="mytab">
+        <caption>My Table Caption</caption>
+        <thead> 
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+        </thead>
+        <tbody id="mytbody">
+            <tr>
+                <td>11</td>
+                <td>Rahul</td>
+                <td>JavaScript</td>
+            </tr>
+            <tr>
+                <td>22</td>
+                <td>Sonal</td>
+                <td>PHP</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>55</td>
+                <td>Rohan</td>
+                <td>WordPress</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <script>
+        var  table = document.getElementById("mytab");
+        // Check Table Caption
+        var tcap = table.createCaption();
+        // Create Caption
+        tcap.innerHTML ="New Caption";
+        // Delete Caption
+        table.deleteCaption();
+        console.log(tcap);
+
+        document.write("THead<br>");
+        // Check tHead
+        var thed = table.createTHead();
+        // Create tHead
+        thed.innerHTML ="<tr><th>Id</th><th>Name</th><th>Courses</th></tr>"
+        // Delete tHead
+        // table.deleteTHead();
+        console.log(thed);
+
+        document.write("TFoot<br>");
+        // Check TFoot
+        var tfut = table.createTFoot();
+        // Create TFoot
+        tfut.innerHTML = "<tr><td>55</td><td>Rohan</td><td>WordPress</td></tr>";
+        // Delete TFoot
+        table.deleteTFoot();
+        console.log(tfut);
+
+        document.write("InsertRow <br>");
+        // -1 is used last table row insert
+        var row = table.insertRow(-1); 
+        // Delete Row
+        table.deleteRow(0);
+        console.log(row);
+
+        // Table Section
+        var tbody = document.getElementById("mytbody");
+        var ro = tbody.rows;
+        // Replace Data
+        ro[1].innerHTML = "<td>100</td><td>Jyoti</td><td>ReactJS</td>"
+        console.log(ro);
+
+        // Insert row on tbody
+        var rw = tbody.insertRow(-1);
+        rw.insertCell().textContent = "New"
+        // Delete Row
+        tbody.deleteRow(1);
+
+    </script>
+</body>
+</html>

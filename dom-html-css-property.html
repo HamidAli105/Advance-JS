@@ -20,6 +20,7 @@
     <p id="mypa" class="myclass2 myclass1" style="color: yellowgreen;">Paragraph</p>
     <p id="mypage" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
     <p id="pg" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
+    <p id="cssall" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
     <script>
         // check value
         var p = document.getElementById("myp");
@@ -115,6 +116,16 @@
      var cp = pg.style;
     var proptyPriorty = cp.getPropertyPriority('color');
     console.log(proptyPriorty);
+     
+    // Computed & getComputed method
+    var allCss = document.getElementById("cssall");
+    // This method is used only read
+    var allCSSProp = window.getComputedStyle(allCss);
+    
+    // Write method this is used only inline css
+    var allcs = allCss.style;
+
+    console.log(allCSSProp.fontStyle);
 
     </script>
 </body>
