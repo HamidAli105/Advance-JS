@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Content</title>
+</head>
+<body>
+    <p id="myp"> A quick brown <span>Fox jums</span><em>Over the lazy dog</em></p>
+   <p id="mypa"></p>
+    <script>
+        var p = document.getElementById("myp");
+        console.log(p);
+        // only show text not use html element
+        p.textContent = "Hello World";
+        console.log(p.textContent);
+
+        var pa = document.getElementById("mypa");
+        // inner html use html element
+        pa.innerHTML = "<i>Hello Friends</i>"
+
+    </script>
+</body>
+</html>

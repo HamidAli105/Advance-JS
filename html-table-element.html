@@ -19,13 +19,13 @@
         <tbody id="mytbody">
             <tr>
                 <td>11</td>
-                <td>Rahul</td>
+                <td id="mytd">Rahul</td>
                 <td>JavaScript</td>
             </tr>
             <tr>
                 <td>22</td>
                 <td>Sonal</td>
-                <td>PHP</td>
+                <td id="mytd">PHP</td>
             </tr>
         </tbody>
         <tfoot>
@@ -62,14 +62,14 @@
         // Create TFoot
         tfut.innerHTML = "<tr><td>55</td><td>Rohan</td><td>WordPress</td></tr>";
         // Delete TFoot
-        table.deleteTFoot();
+        // table.deleteTFoot();
         console.log(tfut);
 
         document.write("InsertRow <br>");
         // -1 is used last table row insert
         var row = table.insertRow(-1); 
         // Delete Row
-        table.deleteRow(0);
+        // table.deleteRow(0);
         console.log(row);
 
         // Table Section
@@ -83,7 +83,25 @@
         var rw = tbody.insertRow(-1);
         rw.insertCell().textContent = "New"
         // Delete Row
-        tbody.deleteRow(1);
+        // tbody.deleteRow(1);
+
+        // Table Row Element
+
+        var mytable = document.getElementById("mytab");
+        var myrow = mytable.rows;
+        // using cell method
+        console.log(myrow[0].cells[0]);
+        // using id method
+        console.log(myrow[1].cells.namedItem("mytd"));
+        // Set data method
+        myrow[2].cells[1].innerHTML = "GeekyShows";
+        // Insert Cells
+        var mycells = myrow[0].insertCell(3);
+        var mycells1 = myrow[1].insertCell(3);
+        mycells.textContent = "Fees";
+        mycells1.textContent = "1000";
+        // Delete Cells
+        myrow[3].deleteCell(0);
 
     </script>
 </body>

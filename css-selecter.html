@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecter CSS</title>
+</head>
+<body>
+    <h1 title="myheading">Heading 1</h1>
+    <img src="img/cat.jpg" alt="catimage" width="30%" height="20%">
+    <img src="img/js.jpg" alt="catimage" width="30%" height="20%">
+    
+    <div>
+        <ul id="myl">
+            <li class="game">Item 1 </li>
+            <li class="supergame">Item 2</li>
+            <li class="game-super">Item 3</li>
+            <li class="gamesuper">Item 4</li>
+            <li class="super-game">Item 5</li>
+            <li class="game super">Item 6</li>
+            <li class="super game">Item 7</li>
+            <li class="super">Item 8</li>
+        </ul>
+    </div>
+
+    <p title="mypara1" class="red black">This is Paragraph 1</p>
+    <p title="mypara2" class="red">This is Paragraph 2</p>
+    <p title="mypara3" class="black">This is Paragraph 3</p>
+    <p title="mypara4" id="book">This is Paragraph 4</p>
+    
+    <h3 class="red">Heading 3</h3>
+    <h4 id="book">Heading 4</h4>
+
+     <script>
+        //  CSS Selecter DOM
+        // Element Selecter
+        var list = document.querySelectorAll('p');
+        console.log(list);
+
+        // Gruop Selecter
+        var group = document.querySelectorAll('div, p');
+        console.log(group);
+
+        // Universal Selecter
+        var univrsl = document.querySelectorAll('*');
+        console.log(univrsl);
+
+        // Class Selecter or Style Class
+        var cls = document.querySelectorAll('.game');
+        console.log(cls);
+
+        // Element Specific Style Class - More specific
+        var elmnt = document.querySelectorAll('p.red.black');
+        console.log(elmnt);
+
+
+     </script>
+</body>
+</html>
