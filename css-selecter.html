@@ -22,12 +22,21 @@
             <li class="super game">Item 7</li>
             <li class="super">Item 8</li>
         </ul>
+        <ul id="mylist">
+            <li class="game">Java </li>
+            <li class="supergame">PHP</li>
+            <li class="game-super">JS</li>
+            <li class="gamesuper">Node Js</li>
+            <li class="super-game">Go</li>
+           
+        </ul>
     </div>
 
     <p title="mypara1" class="red black">This is Paragraph 1</p>
     <p title="mypara2" class="red">This is Paragraph 2</p>
     <p title="mypara3" class="black">This is Paragraph 3</p>
     <p title="mypara4" id="book">This is Paragraph 4</p>
+    <p>This is Paragraph 5</p>
     
     <h3 class="red">Heading 3</h3>
     <h4 id="book">Heading 4</h4>
@@ -53,6 +62,49 @@
         // Element Specific Style Class - More specific
         var elmnt = document.querySelectorAll('p.red.black');
         console.log(elmnt);
+
+        // CSS Selecter DOM
+        // ID Selecter
+        document.write("CSS Selecter Dom <br>");
+        var list1 = document.querySelectorAll('p#book');
+        console.log(list1);
+          // Attribute Selecter
+        var atrbute = document.querySelectorAll('p[title = "mypara1"]');
+        // Attibute Selecter More Specific
+        console.log(atrbute);
+        // Called images list
+        var imglist = document.querySelectorAll('img[width = "30%"] height[height = "20%"]');
+        console.log(imglist);
+        // CSS Selecter Dom
+         // Class Atribute
+         var clsatrbute = document.querySelectorAll('[class ~="game"]');
+        //  this class use start class with game
+         var clsatrbute = document.querySelectorAll('[class |="game"]');
+         //  power button using start word
+         var clsatrbute = document.querySelectorAll('[class ^="game"]');
+          //  called ending class
+          var clsatrbute = document.querySelectorAll('[class $="game"]');
+           //  starck called ga word
+           var clsatrbute = document.querySelectorAll('[class *="ga"]');
+
+        //    CSS Selecter DOM
+        //    Pseduo Class
+        //    first-child and last child
+        // Specific first child
+        var frst_child =  document.querySelectorAll('li:first-child');
+        var frst_child =  document.querySelectorAll('li:last-child');
+        // all first child called
+        var frst_child =  document.querySelectorAll(':first-child');
+        var frst_child =  document.querySelectorAll(':last-child');
+        // nth-child called even and odd
+        var nth_child = document.querySelectorAll('li:nth-child(3)');
+        var nth_child = document.querySelectorAll('li:nth-child(even)');
+        var nth_child = document.querySelectorAll('li:nth-child(odd)');
+        var nth_child = document.querySelectorAll('li:nth-last-child(odd)');
+        // nth-last-child
+        var nth_last = document.querySelectorAll(':empty');
+        console.log(nth_last);
+
 
 
      </script>
