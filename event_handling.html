@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <h1>Event Handling with HTML</h1>
+    <button onclick="show()">Click Me</button>
+    <h1>Event Handling with javaScript and Overwritng</h1>
+    <button id="mybtn">Click Me</button>
+    <h2>Add Event Listener</h2>
+    <button id="myevent">Click Me</button>
+    <h1>Overwriting Event Handling with javaScript</h1>
+    <button id="mybtnevent">Click Me</button> 
+    <h1>Remove Event Listener</h1>
+    <button id="rebtn">Click Me</button>
+
+
+
+    <script>
+        // Event with HTML
+        function show(){
+            alert("Hello World");
+        }
+
+        // Event with Javascript
+        function disp1()
+        {
+            alert("Button Clicked1");
+        }
+    
+        function disp2()
+        {
+            alert("Button Clicked2");
+        }
+        // Overwriting
+        var btn = document.getElementById("mybtn").onclick = disp1;
+        var btn = document.getElementById("mybtn").onclick = disp2;
+
+        //Add Event with Javascript using click
+        var btnevent = document.getElementById("myevent");
+        btnevent.addEventListener("click", show);
+
+          // Add Event with Javascript Event Listener
+          var btnevent = document.getElementById("myevent");
+        btnevent.addEventListener("click", show);
+
+        // Add Event with Javascript using mouseover
+        var btnevent = document.getElementById("myevent");
+        btnevent.addEventListener("mouseover", disp1);
+        btnevent.addEventListener("mouseover", disp2);
+        
+        // Remove Event Listenr
+      
+        function revfun(){
+            alert("Button Clicked");
+        }
+        var rbtn = document.getElementById("rebtn");
+        rbtn.addEventListener("click", revfun, false);
+        rbtn.addEventListener("click", revfun, true);
+        rbtn.removeEventListener("click", revfun, true);
+
+
+
+
+    </script>
+</body>
+</html>
