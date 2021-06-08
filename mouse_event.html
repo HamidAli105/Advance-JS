@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body>
+    <div id="one" style="width: 100px; height:100px; background-color:red;">
+     <div id="two" style="width:60px; height:60px; background-color:black;"></div>
+    </div><br>
+    <!-- Mouse over and mouse out -->
+    Name: <input type="text" id="mytext">
+
+    
+    <script>
+        function div1 (e){
+            console.log(e.type);
+        }
+        function div2 (e){
+            console.log(e.type);
+        }
+        var divOne = document.getElementById("one");
+        var divTwo = document.getElementById("two");
+        // Mouse Down
+        divTwo.addEventListener("mousedown", div1, false);
+        // Mouse Up
+        divTwo.addEventListener("mouseup", div1, false);
+        // Click
+        divTwo.addEventListener("click", div1, false);
+        // Double Click
+        divTwo.addEventListener("dblclick", div1, false);
+        // Mouse Enter
+        divTwo.addEventListener("mouseenter", div1, false);
+        // Mouse Enter
+        divTwo.addEventListener("mouseleave", div1, false);
+        // Mouse Over
+        divTwo.addEventListener("mouseover", div1, false);
+        // Mouse Out
+        divTwo.addEventListener("mouseout", div1, false);
+        // Mouse Move
+        divTwo.addEventListener("mousemove", div1, false);
+        // write Click
+        divTwo.addEventListener("contextmenu", div1, false);
+
+        // Bubling Method same method use above and parent child both
+        divTwo.addEventListener("click", div2, false);
+        divOne.addEventListener("click", div1, false);
+
+        // Mouse over and Mouse out
+        var txt = document.getElementById("mytext");
+        function changeColorOrange (e){
+            txt.style.backgroundColor = 'orange'
+        }
+        function changeColorWhite (e){
+            txt.style.backgroundColor = 'white'
+        }
+       txt.addEventListener("mouseover", changeColorOrange, false);
+       txt.addEventListener("mouseout", changeColorWhite, false);
+    </script>
+</body>
+</html>

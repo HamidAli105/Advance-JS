@@ -39,9 +39,47 @@
           </div>
         </div>
     </div>
+   <br>
+  <div id="mydiv" style="width:200px; height:200px; background-color: burlywood;" >
+  <a href="https://www.electricalconnectionsau.com.au/" id="mylink">Click and Open Web</a>
+</div>
 
     <script>
-      function div1 ()
+      function div1 (e){
+          this.style.backgroundColor = 'red';
+      }
+      function div2 (e){
+          this.style.backgroundColor = 'blue';
+          e.stopImmediatePropagation();
+      }
+      function div2_2 (e){
+          this.style.width = '250px';
+      }
+      function div3 (e){
+          this.style.backgroundColor = 'green';
+          e.stopPropagation();
+      }
+
+      var divOne = document.getElementById("one");
+      var divTwo = document.getElementById("two");
+      var divThree = document.getElementById("three");
+      
+      divOne.addEventListener("click", div1, false);
+      divTwo.addEventListener("click", div2, false);
+      divTwo.addEventListener("click", div2_2, false);
+      divThree.addEventListener("click", div3, false);
+
+    //   Stop link open function
+    function stopLink (e){
+        e.preventDefault();
+        e.stopPropagation();
+    }
+
+    var l = document.getElementById("mylink");
+    var d = document.getElementById("mydiv");
+    l.addEventListener("click", stopLink, false);
+    d.addEventListener("click", div1, false);
+
     </script>
 
 </body>
