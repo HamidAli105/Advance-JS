@@ -47,11 +47,11 @@ parent.removeChild(child);
 // Replacing Html Elements
 document.write("<h2>Replacing Html Elements</h2> <br>");
 var para = document.createElement("p");
-var node = document.createTextNode("This is new.");
+var node = document.createTextNode("Email or Password is Incorrect");
 para.appendChild(node);
 
-var parent = document.getElementById("div1");
-var child = document.getElementById("p3");
+var parent = document.getElementsByClassName("um-form");
+var child = document.getElementsByClassName("um-notice");
 parent.replaceChild(para, child);
 
 </script>

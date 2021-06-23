@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Object</title>
+</head>
+<body>
+    <h1>Window Object</h1>
+<h2>Dialog Boxes</h2>
+<h3>Window Alert</h3>
+<h4>Window Conform</h4>
+<h5>Window conform</h5>
+<h6>Window Prompt</h6>
+<span>Window Open</span>
+<button type="button " id="btn">Create New Window</button>
+
+<script>
+    // Outer Height
+    var oh = window.outerHeight;
+    console.log("Outer Height = " + oh);
+    // Outer Width
+    var ow = window.outerWidth;
+    console.log("Outer Width = " + ow);
+     // Inner Height
+     var oh = window.innerHeight;
+    console.log("Inner Height = " + oh);
+    // Inner Width
+    var ow = window.innerWidth;
+    console.log("Inner Height = " + ow);
+
+    // Alert Message
+    var a = 10;
+    window.alert("I am alert");
+    // alert("Main alert hoon");
+    // alert(a);
+    // alert(786 + 105);
+    // alert("Price = " + a);
+
+    // window Conform
+    // window.confirm("Are You Sure ?");
+    // confirm("Are you Sure Conform this ?");
+    
+    // // If Condition
+    // var crn =confirm("Do you want to Delete ?");
+    // if(crn){
+    //     document.write("Data Deleted");
+    // }
+    // else{
+    //     document.write("Action Cancelled");
+    // }
+
+    // // Prompt Method
+    // var name = prompt("Enter Your Name: ", "Example: Hamid");
+    // document.write(name);
+
+    // Open and Close Window    
+    function createWindow(){
+        window.open();
+    }
+    document.getElementById("btn").addEventListener("click", createWindow);
+
+    // Window Feature
+    var newwindow  = window.open("https://www.actiworkffe.com.au/", "_self");
+    var newwindow  = window.open("https://www.actiworkffe.com.au/", "_blank");
+    var newwindow  = window.open("https://www.twitter.com", "_blank", "height=400, width=600");
+
+
+</script> 
+</body>
+</html>

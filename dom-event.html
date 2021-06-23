@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>DOM</title>
 <source src="dom.js" type="">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 <body onload="checkCookies()">
   <h1>Document Events Handler</h1>
@@ -33,6 +33,12 @@ Click Me</div>
 <!-- Focus Event -->
 <h1>Focus Event</h1>
 Name: <input type="text" id="mytext">
+<h1>Key Event</h1>
+Name: <input type="text" id="mykey">
+ <!--Text Event -->
+ <h1>Text Event</h1>
+ Name: <input type="text" id="txtInput">
+
 
 
 <script type="text/javascript">
@@ -83,6 +89,37 @@ function mUp(obj) {
   obj.innerHTML="Thank You";
 }
 
+// Focus Event
+var txt = document.getElementById("mytext");
+// Foucin
+function  fe(e){
+  txt.style.backgroundColor = 'green';
+}
+// Focusout
+function  be(e){
+  txt.style.backgroundColor = 'white';
+}
+txt.addEventListener("focus", fe);
+txt.addEventListener("blur", be);
+
+// Key Event
+var key = document.getElementById("mykey");
+function ke(e){
+  console.log(e.type + ' ' + e.keyCode + ' ' + String.fromCharCode(e.keyCode));
+}
+// Keydonw Event
+key.addEventListener("keydown", ke, false);
+key.addEventListener("keypress", ke, false);
+key.addEventListener("keyup", ke, false);
+
+// Text Input
+var inputTxt = document.getElementById("txtInput");
+function show(e)
+{
+  console.log(e.type + ' ' +  e.date);
+
+}
+inputTxt.addEventListener("textInput", show, false);
 
 </script>
 
