@@ -15,6 +15,15 @@
 <h6>Window Prompt</h6>
 <span>Window Open</span>
 <button type="button " id="btn">Create New Window</button>
+<!-- Close Window -->
+<button type="button" id="kloj">Close New Window</button>
+<!-- Print Window -->
+<button type="button" id="btn">Print</button>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+   Corrupti sit dolores natus amet reprehenderit. Aperiam excepturi <br>
+   voluptatibus odio non soluta atque iusto voluptate. Recusandae, dignissimos<br>
+    non totam sed consequatur tempora.</p>
+
 
 <script>
     // Outer Height
@@ -62,9 +71,23 @@
     document.getElementById("btn").addEventListener("click", createWindow);
 
     // Window Feature
-    var newwindow  = window.open("https://www.actiworkffe.com.au/", "_self");
-    var newwindow  = window.open("https://www.actiworkffe.com.au/", "_blank");
-    var newwindow  = window.open("https://www.twitter.com", "_blank", "height=400, width=600");
+    // var newwindow  = window.open("https://www.actiworkffe.com.au/", "_self");
+    // var newwindow  = window.open("https://www.facebook.com.au/", "_blank", "height=400, width=600, scrollbars=no");
+    var newwindow  = window.open("", "_blank", "height=400, width=600" );
+     newwindow.document.write("Main new Window Hoon");
+
+     function ekjit(){
+         newwindow.document.close();
+         newwindow.close();
+
+     }
+     document.getElementById("kloj").addEventListener("click", ekjit);
+
+    //  Window Print
+    function pirntDoc(){
+        window.print();
+    }
+    document.getElementById("btn").addEventListener("click", pirntDoc);
 
 
 </script> 
