@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location Object</title>
+</head>
+<body>
+<h1>Location Object</h1>
+    
+<script>
+    var result;
+    result = window.location.hash;
+    result = window.location.hostname;
+    result = window.location.port;
+    result = window.location.protocol;
+    result = window.location.href;
+    result = window.location.pathname;
+
+    // Set value
+    window.location.href = 'http://www.google.com';
+    console.log(result);
+
+    window.location.assign('http://www.google.com');
+    window.location.replace('http://www.google.com');
+    window.history.back();
+    window.history.forward();
+    window.history.go(-3);
+    document.write(window.history.length)
+</script>
+</body>
+</html>
