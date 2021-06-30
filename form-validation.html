@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form accept="" name="myform">
+        Username: <input type="text" name="u_field"> <small id="u_small"></small>  <br><br>
+        <input type="submit" name="sbtn" value="Submit">
+    </form>
+    
+    <script>
+        // Method One
+    //  function validatedata(){
+    //  var patrn = /^([^0-9\W]*)$/;
+    //  if(patrn.test(document.myform.u_field.value)){
+    //      document.myform.u_field.style.backgroundColor = 'green';
+    //  }
+    //  else{
+    //     document.myform.u_field.style.backgroundColor = 'red';
+    //  }
+
+    //  }
+    //  document.myform.u_field.addEventListener("keyup", validatedata);
+
+   // Method Two
+     function validatedata(){
+     var patrn = /^([^0-9\W]*)$/;
+     if(patrn.test(document.myform.u_field.value)){
+
+        document.getElementById("u_small").textContent = "User is Valid";
+        document.getElementById("u_small").style.color = 'green';
+     }
+     else{
+        document.getElementById("u_small").textContent = "User is Invalid";
+        document.getElementById("u_small").style.color = 'red';
+     }
+
+     }
+     document.myform.u_field.addEventListener("keyup", validatedata);
+
+
+    </script>
+
+</body>
+</html>
