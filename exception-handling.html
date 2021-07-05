@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exception Handling</title>
+</head>
+<body>
+    <h1>Exception Handling</h1>
+
+    <script>
+
+    function getRectArea(w,h){
+        if ( isNaN(w) || isNaN(h)){
+            throw "Parameter is not a number!";
+        }
+    }
+    try{
+        getRectArea(10, 'A');
+    }
+    catch (e) {
+        document.write(e);
+    }
+    document.write("<br><br> I've no idea what going on above ");
+
+
+        // try{
+        //     add();
+        //     document.write("Skipped Code");
+        // }
+        // Default message
+        // catch (e){
+        //     document.write("Message: " + e.message + "<br>");
+        //     document.write("Name: " + e.name + "<br>");
+        //     document.write("Stack: " + e.stack + "<br>");
+        // }
+        // Custom Message
+        // catch (e){
+        //            document.write("Function Define nahi hai <br>");
+        // }
+        // finally{
+        //           document.write("Get executed whether there is exception or not <br>")
+        // }
+    </script>
+    
+</body>
+</html>
