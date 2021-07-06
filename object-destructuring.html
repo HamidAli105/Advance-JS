@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Destructuring</title>
+</head>
+<body>
+    <h1>Oject Destructuring</h1>
+
+    <script>
+         // Method One
+         console.log("Method One");
+        var course = {courseName: "JavaScript", duration: "SixMonth", tutor:"Geekyshows"};
+        console.log(course.courseName);
+        console.log(course.duration);
+        console.log(course.tutor);
+         // Method Two
+         console.log("Method Two");
+         var course = {courseName: "JavaScript", duration: "SixMonth", tutor:"Geekyshows"};
+        c =course.courseName;
+        d =course.duration;
+        t =course.tutor;
+       console.log(c);
+       console.log(d);
+       console.log(t);
+     // Method Three destructuring
+        console.log("Method Three");
+         var course = {courseName, duration, tutor} = course;
+         console.log(courseName);
+         console.log(duration);
+         console.log(tutor);
+        // Method four destructuring
+        console.log("Method Four");
+         var course = {courseName:cname, duration:time, tutor:teacher} = course;
+         console.log(cname);
+         console.log(time);
+         console.log(teacher);
+    // Method five called desired object
+        console.log("Method Five");
+         var course = {courseName, duration} = course;
+         console.log(courseName);
+         console.log(duration);
+    // Method six 
+        console.log("Method Six");
+        var { a, b} = { a: 10, b: 20};
+        console.log(a);
+        console.log(b);
+    // Method Seven Default Value
+        console.log("Method Seven");
+        var { a, b = 20 } = { a: 50};
+        console.log(a);
+        console.log(b);
+    // Method Eight using function
+        console.log("Method Eight");
+        var course = {courseName: "JavaScript", duration: "SixMonth", tutor:"Geekyshows"};
+        function show(a){
+            console.log(a.courseName);
+            console.log(a.duration);
+            console.log(a.tutor);
+        }
+      show(course);
+    // Method Nine
+        console.log("Method Nine");
+        var course = {courseName: "JavaScript", duration: "SixMonth", tutor:"Geekyshows"};
+        function show({courseName, duration, tutor}){
+            console.log(courseName);
+            console.log(duration);
+            console.log(tutor);
+        }
+      show(course);
+
+       // Method Ten
+       console.log("Method Ten");
+        function show (z){
+            return z;
+        }
+        var x = show(course);
+        var {courseName, duration, tutor} = x;
+
+        console.log(courseName);
+        console.log(duration);
+        console.log(tutor);
+
+        // Method Eleven
+       console.log("Method Eleven");
+       var course = {courseName: "JavaScript", duration: "SixMonth", tutor: "GeekyShows", student:{stu1: "Hamid", stu2: "Ali"}};
+       var {courseName, duration, tutor, student:{ stu1, stu2}} = course;
+       console.log(courseName);
+       console.log(duration);
+       console.log(tutor);
+       console.log(stu1);
+       console.log(stu2);
+
+    </script>
+    
+</body>
+</html>
