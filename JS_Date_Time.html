@@ -23,17 +23,19 @@ function checkTime(i) {
 </script>
 
 </head>
+
 <body onload="startTime()">
 	<div id="txt"></div>
 <br>
-<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+<button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button><br><br>
+<span id="demo1"></span> <span> ~ </span>  <span id="demo2"></span> <br><br>
 <button onclick="clearTimeout(myVar)">Stop it</button><br>
 
-<p>A script on this page starts this clock:</p>
+<!-- <p>A script on this page starts this clock:</p>
 <p id="demo"></p>
-<p id="demo1"></p>
+<p id="demo1"></p> -->
 
-<button onclick="clearInterval(myVar)">Stop time</button>
+<!-- <button onclick="clearInterval(myVar)">Stop time</button> -->
 
 <script>
 
@@ -48,12 +50,12 @@ var myVar = setInterval(myTimer, 1000);
 
 function myTimer() {
   var d = new Date();
-  document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+  document.getElementById("demo1").innerHTML = d.toLocaleTimeString();
 }
 
 var d = new Date();
 d.setFullYear(2020);
-document.getElementById("demo1").innerHTML = d.toLocaleDateString();
+document.getElementById("demo2").innerHTML = d.toLocaleDateString();
 
 </script>
 
