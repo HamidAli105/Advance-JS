@@ -7,6 +7,7 @@
     <title>Event Method</title>
 
     <style>
+
     #one {
         width: 400px;
         height: 400px;
@@ -27,6 +28,7 @@
         height: 100px;
         background-color: yellow;
     }
+
     </style>
 
 </head>
@@ -45,9 +47,11 @@
 </div>
 
     <script>
+
       function div1 (e){
           this.style.backgroundColor = 'red';
       }
+      
       function div2 (e){
           this.style.backgroundColor = 'blue';
           e.stopImmediatePropagation();

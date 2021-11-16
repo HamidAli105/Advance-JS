@@ -18,9 +18,8 @@
     <h1>Remove Event Listener</h1>
     <button id="rebtn">Click Me</button>
 
-
-
     <script>
+
         // Event with HTML
         function show(){
             alert("Hello World");
@@ -60,12 +59,10 @@
         }
         var rbtn = document.getElementById("rebtn");
         rbtn.addEventListener("click", revfun, false);
-        rbtn.addEventListener("click", revfun, true);
+        rbtn.addEventListener("click", revfun, false);
         rbtn.removeEventListener("click", revfun, true);
 
-
-
-
     </script>
+
 </body>
 </html>

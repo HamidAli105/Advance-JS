@@ -8,8 +8,11 @@
 </head>
 <body>
     <form accept="" name="myform">
-        Username: <input type="text" name="u_field"> <small id="u_small"></small>  <br><br>
+
+        First Name: <input type="text" name="u_field"> <small id="u_small"></small>  
+        Last Name: <input type="text" name="e_field"> <small id="e_small"></small>  <br><br>
         <input type="submit" name="sbtn" value="Submit">
+
     </form>
     
     <script>
@@ -31,16 +34,28 @@
      var patrn = /^([^0-9\W]*)$/;
      if(patrn.test(document.myform.u_field.value)){
 
-        document.getElementById("u_small").textContent = "User is Valid";
-        document.getElementById("u_small").style.color = 'green';
+        document.getElementById("u_small").textContent = "First Name is Valid";
+        document.getElementById("u_small").style.color = 'blue';
      }
      else{
-        document.getElementById("u_small").textContent = "User is Invalid";
-        document.getElementById("u_small").style.color = 'red';
+        document.getElementById("u_small").textContent = "Last Name is Invalid";
+        document.getElementById("u_small").style.color = 'black';
      }
 
+     if(patrn.test(document.myform.e_field.value)){
+
+ document.getElementById("e_small").textContent = "Last Name is Valid";
+ document.getElementById("e_small").style.color = 'blue';
+ }
+ else{
+ document.getElementById("e_small").textContent = "First Name is Invalid";
+ document.getElementById("e_small").style.color = 'black';
+ }
+
      }
+
      document.myform.u_field.addEventListener("keyup", validatedata);
+     document.myform.e_field.addEventListener("keyup", validatedata);
 
 
     </script>

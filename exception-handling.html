@@ -24,24 +24,24 @@
     }
     document.write("<br><br> I've no idea what going on above ");
 
-
-        // try{
-        //     add();
-        //     document.write("Skipped Code");
-        // }
+        try{
+            add();
+            document.write("Skipped Code");
+        }
         // Default message
-        // catch (e){
-        //     document.write("Message: " + e.message + "<br>");
-        //     document.write("Name: " + e.name + "<br>");
-        //     document.write("Stack: " + e.stack + "<br>");
-        // }
+        catch (e){
+            document.write("Message: " + e.message + "<br>");
+            document.write("Name: " + e.name + "<br>");
+            document.write("Stack: " + e.stack + "<br>");
+        }
         // Custom Message
         // catch (e){
         //            document.write("Function Define nahi hai <br>");
         // }
-        // finally{
-        //           document.write("Get executed whether there is exception or not <br>")
-        // }
+        finally{
+                  document.write("Get executed whether there is exception or not <br>")
+        }
+
     </script>
     
 </body>

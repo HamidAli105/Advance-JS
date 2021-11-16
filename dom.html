@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>DOM</title>
 <source src="dom.js" type="">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
 <body>
 	<!-- Create id for get element -->
@@ -23,6 +23,7 @@
        <p class="intro">This is text for use learn fast speed test</p>
 
 <script type="text/javascript">
+
 // getElementByID()
 document.write("Name id <br>");
 var result = document.getElementById("name");
@@ -85,13 +86,13 @@ document.write("<h1>JavaScript Animation</h1><br>");
 
 var id = setInterval(frame, 5);
 
-// function frame() {
-//   if (/* test for finished */) {
-//     clearInterval(id);
-//   } else {
-//     /* code to change the element style */ 
-//   }
-// }
+function frame() {
+  if (/* test for finished */) {
+    clearInterval(id);
+  } else {
+    /* code to change the element style */ 
+  }
+}
 
 function myMove() {
   var elem = document.getElementById("animate");   
