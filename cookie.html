@@ -8,6 +8,7 @@
 </head>
 <body>
     <h1>Cookies</h1>
+
     <form accept="" name="myform" method="POST">
         Name: <input type="text" name="name"><br><br>
         Email: <input type="email" name="email"><br><br>
@@ -35,11 +36,11 @@
             document.cookie = "email=" + document.myform.email.value + "; max-age=" + 60*60*24*10;;
             document.cookie = "language=" + document.myform.lang.value + "; max-age=" + 60*60*24*10;;
         }
-    //    alert(document.cookie);
+     alert(document.cookie);
         // Get Cookies
         function getCookies() {
             var coookiesArray = document.cookie.split(";");
-            for (var i=0; i<coookiesArray.length; i++){
+            for (var i=0; i < coookiesArray.length; i++){
                 var valueArray = coookiesArray[i].split("="); 
              if(valueArray[0].trim() == 'name'){
                  document.myform.name.value = valueArray[1];

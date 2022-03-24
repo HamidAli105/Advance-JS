@@ -29,19 +29,14 @@
 <script>
 
 	// javascript window
-var w = window.innerWidth
-|| document.documentElement.clientWidth
-|| document.body.clientWidth;
+var w = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-var h = window.innerHeight
-|| document.documentElement.clientHeight
-|| document.body.clientHeight;
+var h = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
 
 var x = document.getElementById("demo");
 x.innerHTML = "Browser inner window width: " + w + ", Browser inner height: " + h + ".";
 // JS Screen width
-document.getElementById("demo1").innerHTML = 
-"Screen width is: " + screen.width;
+document.getElementById("demo1").innerHTML = "Screen width is: " + screen.width;
 // JS Screen Height
 document.getElementById("demo2").innerHTML = 
 "Screen Height is: " + screen.height;

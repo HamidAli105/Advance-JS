@@ -16,11 +16,11 @@
     </style>
 </head> 
 <body>
-    <p id="myp" class="myclass2" style="color: yellowgreen;">Paragraph</p>
-    <p id="mypa" class="myclass2 myclass1" style="color: yellowgreen;">Paragraph</p>
-    <p id="mypage" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
-    <p id="pg" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
-    <p id="cssall" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph</p>
+    <p id="myp" class="myclass2" style="color: yellowgreen;">Paragraph One</p>
+    <p id="mypa" class="myclass2 myclass1" style="color: yellowgreen;">Paragraph Two</p>
+    <p id="mypage" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph Three</p>
+    <p id="pg" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph Four</p>
+    <p id="cssall" class="myclass2 myclass1" style="color: yellowgreen; font-size: 30px;">Paragraph Five</p>
 
     <script>
         // check value
@@ -30,10 +30,10 @@
         console.log(bg);
         // set value
         var p = document.getElementById("myp");
-        p.style.backgroundColor = "red";
+        p.style.backgroundColor = "blue";
         p.style.fontSize ="80px";
         console.log(p);
-
+ 
         // Dynamic Style Manipulation
     //    var pa = document.getElementById("mypa")
     //    pa.className = "myclass1";
@@ -62,10 +62,11 @@
     // Remove one and multiple classes
     elementClass.remove("myclass4", "myclass5");
     console.log(pa);
-
+   
      // Replace  class
      elementClass.replace("myclass2", "myclass1");
     console.log(pa);
+
      // contains is used exist or not exist classes
     var c = elementClass.contains("myclass6");
     console.log(c);
@@ -74,7 +75,7 @@
     var c = elementClass.toggle("myclass1");
     var c = elementClass.toggle("myclass1");
     console.log(c);
-   
+   exit;
     // CSS style declaration
     document.write("<br>");
     document.write("CSS Style Declartion");

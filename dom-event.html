@@ -9,7 +9,7 @@
 <body onload="checkCookies()">
   <h1>Document Events Handler</h1>
 	<!-- change text -->
-<h1 onclick="changeText(this)"><a href="#">Click Change Text</a></h1>
+<h1 onclick="changeText()"><a href="#">Click Change Text</a></h1>
 <!-- show date time -->
 <h1>Click the button to display the date</h1>
 <button onclick="displayDate()">Click Show Date&Time</button>
@@ -39,9 +39,9 @@ Name: <input type="text" id="mykey">
  <h1>Text Event</h1>
  Name: <input type="text" id="txtInput">
 
-<script type="text/javascript">
+<script>
 
-function changeText(id) {
+function changeText() {
   id.innerHTML = "Change Text with javascript";
 }
 

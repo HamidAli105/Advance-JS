@@ -32,11 +32,11 @@
         var targetNode = document.getElementById("myid")
         targetNode.appendChild(nNode);
         console.log(targetNode);
-
+        
         // Small way Creating and Appending New h2 to div
         targetNode.appendChild(document.createElement("h2"));
         console.log(targetNode);
-
+        exit;
         // Creating a new Text Node
         document.write("Create Text Node + <br>");
         var nTNode = document.createTextNode("Text Created by JavaScript");
@@ -54,10 +54,10 @@
         var df = document.createDocumentFragment();
         console.log(df);
         document.write(df + "<br>");
-
+    
         // Creating Append Existing Element
         document.write("Append Child + <br>");
-        document.write("Create Append Existing Element+ <br>");
+        document.write("Create Append Existing Element + <br>");
         var myid = document.getElementById("myid");
         // Parent 
         var mysec = document.getElementById("mysec");
