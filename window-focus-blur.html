@@ -22,13 +22,13 @@
         //     newwindow = window.open("", "_blank", "width=300, height=200");
         // }
 
-        // function focusnwin(){
-        //     newwindow.focus();
-        // }  
+        function focusnwin(){
+            newwindow.focus();
+        }  
         
-        // function blurnwin(){
-        //     newwindow.blur();
-        // }  
+        function blurnwin(){
+            newwindow.blur();
+        }  
 
         // document.getElementById("openbtn").addEventListener("click", openwin);
         // document.getElementById("movebtn").addEventListener("click", openwin);
@@ -54,8 +54,10 @@
         }
 
         document.getElementById("openbtn").addEventListener("click", openwin);
-        // document.getElementById("movebtn").addEventListener("click", moveWin);
+        document.getElementById("movebtn").addEventListener("click", moveWin);
         document.getElementById("resizebtn").addEventListener("click", resizeWin);
+        document.getElementById("focusbtn").addEventListener("click", focusnwin);
+        document.getElementById("blurbtn").addEventListener("click", blurnwin);
 
     </script>
     
