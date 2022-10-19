@@ -13,14 +13,9 @@
     <button type="button" id="resizebtn">Resize Window</button>
     <button type="button" id="focusbtn">Focus</button>
     <button type="button" id="blurbtn">Blur</button>
-    
-
 
     <script>
         var newwindow;
-        // function openwin(){
-        //     newwindow = window.open("", "_blank", "width=300, height=200");
-        // }
 
         function focusnwin(){
             newwindow.focus();
@@ -30,18 +25,13 @@
             newwindow.blur();
         }  
 
-        // document.getElementById("openbtn").addEventListener("click", openwin);
-        // document.getElementById("movebtn").addEventListener("click", openwin);
-        // document.getElementById("focusbtn").addEventListener("click", focusnwin);
-        // document.getElementById("blurbtn").addEventListener("click", blurnwin);
-
       //  Open Window
         function openwin(){
             newwindow = window.open("", "newwindow", "width=300, height=200");
             newwindow.document.write("Main New Window Hoon");
         }
 // Difference between resizeBy or moveBy move and resize window every click and resizeTo and moveTo is used only one click
-        // // Move Window
+        // Move Window
         function moveWin(){
             newwindow.moveTo(200, 200);
             newwindow.focus();
